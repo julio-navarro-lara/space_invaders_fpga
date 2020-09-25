@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="Space_Invaders_Ultimate">
+		<CBX_INST_ENTRY INSTANCE_NAME="|space_invaders_ultimate|lpm_add_sub:Add2" CBX_FILE_NAME="add_sub_njh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|space_invaders_ultimate|lpm_add_sub:Add6" CBX_FILE_NAME="add_sub_kch.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|space_invaders_ultimate|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_npl.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|space_invaders_ultimate|lpm_add_sub:Add3" CBX_FILE_NAME="add_sub_ooh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|space_invaders_ultimate|lpm_add_sub:Add7" CBX_FILE_NAME="add_sub_enh.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

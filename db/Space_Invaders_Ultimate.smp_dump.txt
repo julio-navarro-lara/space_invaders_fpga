@@ -1,0 +1,104 @@
+
+State Machine - |space_invaders_ultimate|memoria_video[108]
+Name memoria_video[108].nave memoria_video[108].disparo memoria_video[108].muerto memoria_video[108].marciano memoria_video[108].nada 
+memoria_video[108].nada 0 0 0 0 0 
+memoria_video[108].marciano 0 0 0 1 1 
+memoria_video[108].muerto 0 0 1 0 1 
+memoria_video[108].disparo 0 1 0 0 1 
+memoria_video[108].nave 1 0 0 0 1 
+
+State Machine - |space_invaders_ultimate|memoria_video[107]
+Name memoria_video[107].nave memoria_video[107].disparo memoria_video[107].muerto memoria_video[107].marciano memoria_video[107].nada 
+memoria_video[107].nada 0 0 0 0 0 
+memoria_video[107].marciano 0 0 0 1 1 
+memoria_video[107].muerto 0 0 1 0 1 
+memoria_video[107].disparo 0 1 0 0 1 
+memoria_video[107].nave 1 0 0 0 1 
+
+State Machine - |space_invaders_ultimate|memoria_video[106]
+Name memoria_video[106].nave memoria_video[106].disparo memoria_video[106].muerto memoria_video[106].marciano memoria_video[106].nada 
+memoria_video[106].nada 0 0 0 0 0 
+memoria_video[106].marciano 0 0 0 1 1 
+memoria_video[106].muerto 0 0 1 0 1 
+memoria_video[106].disparo 0 1 0 0 1 
+memoria_video[106].nave 1 0 0 0 1 
+
+State Machine - |space_invaders_ultimate|memoria_video[105]
+Name memoria_video[105].nave memoria_video[105].disparo memoria_video[105].muerto memoria_video[105].marciano memoria_video[105].nada 
+memoria_video[105].nada 0 0 0 0 0 
+memoria_video[105].marciano 0 0 0 1 1 
+memoria_video[105].muerto 0 0 1 0 1 
+memoria_video[105].disparo 0 1 0 0 1 
+memoria_video[105].nave 1 0 0 0 1 
+
+State Machine - |space_invaders_ultimate|memoria_video[104]
+Name memoria_video[104].nave memoria_video[104].disparo memoria_video[104].muerto memoria_video[104].marciano memoria_video[104].nada 
+memoria_video[104].nada 0 0 0 0 0 
+memoria_video[104].marciano 0 0 0 1 1 
+memoria_video[104].muerto 0 0 1 0 1 
+memoria_video[104].disparo 0 1 0 0 1 
+memoria_video[104].nave 1 0 0 0 1 
+
+State Machine - |space_invaders_ultimate|memoria_video[103]
+Name memoria_video[103].nave memoria_video[103].disparo memoria_video[103].muerto memoria_video[103].marciano memoria_video[103].nada 
+memoria_video[103].nada 0 0 0 0 0 
+memoria_video[103].marciano 0 0 0 1 1 
+memoria_video[103].muerto 0 0 1 0 1 
+memoria_video[103].disparo 0 1 0 0 1 
+memoria_video[103].nave 1 0 0 0 1 
+
+State Machine - |space_invaders_ultimate|memoria_video[102]
+Name memoria_video[102].nave memoria_video[102].disparo memoria_video[102].muerto memoria_video[102].marciano memoria_video[102].nada 
+memoria_video[102].nada 0 0 0 0 0 
+memoria_video[102].marciano 0 0 0 1 1 
+memoria_video[102].muerto 0 0 1 0 1 
+memoria_video[102].disparo 0 1 0 0 1 
+memoria_video[102].nave 1 0 0 0 1 
+
+State Machine - |space_invaders_ultimate|memoria_video[101]
+Name memoria_video[101].nave memoria_video[101].disparo memoria_video[101].muerto memoria_video[101].marciano memoria_video[101].nada 
+memoria_video[101].nada 0 0 0 0 0 
+memoria_video[101].marciano 0 0 0 1 1 
+memoria_video[101].muerto 0 0 1 0 1 
+memoria_video[101].disparo 0 1 0 0 1 
+memoria_video[101].nave 1 0 0 0 1 
+
+State Machine - |space_invaders_ultimate|memoria_video[100]
+Name memoria_video[100].nave memoria_video[100].disparo memoria_video[100].muerto memoria_video[100].marciano memoria_video[100].nada 
+memoria_video[100].nada 0 0 0 0 0 
+memoria_video[100].marciano 0 0 0 1 1 
+memoria_video[100].muerto 0 0 1 0 1 
+memoria_video[100].disparo 0 1 0 0 1 
+memoria_video[100].nave 1 0 0 0 1 
+
+State Machine - |space_invaders_ultimate|memoria_video[99]
+Name memoria_video[99].nave memoria_video[99].disparo memoria_video[99].muerto memoria_video[99].marciano memoria_video[99].nada 
+memoria_video[99].nada 0 0 0 0 0 
+memoria_video[99].marciano 0 0 0 1 1 
+memoria_video[99].muerto 0 0 1 0 1 
+memoria_video[99].disparo 0 1 0 0 1 
+memoria_video[99].nave 1 0 0 0 1 
+
+State Machine - |space_invaders_ultimate|memoria_video[98]
+Name memoria_video[98].nave memoria_video[98].disparo memoria_video[98].muerto memoria_video[98].marciano memoria_video[98].nada 
+memoria_video[98].nada 0 0 0 0 0 
+memoria_video[98].marciano 0 0 0 1 1 
+memoria_video[98].muerto 0 0 1 0 1 
+memoria_video[98].disparo 0 1 0 0 1 
+memoria_video[98].nave 1 0 0 0 1 
+
+State Machine - |space_invaders_ultimate|memoria_video[97]
+Name memoria_video[97].nave memoria_video[97].disparo memoria_video[97].muerto memoria_video[97].marciano memoria_video[97].nada 
+memoria_video[97].nada 0 0 0 0 0 
+memoria_video[97].marciano 0 0 0 1 1 
+memoria_video[97].muerto 0 0 1 0 1 
+memoria_video[97].disparo 0 1 0 0 1 
+memoria_video[97].nave 1 0 0 0 1 
+
+State Machine - |space_invaders_ultimate|memoria_video[1]
+Name memoria_video[1].nave memoria_video[1].disparo memoria_video[1].muerto memoria_video[1].marciano memoria_video[1].nada 
+memoria_video[1].nada 0 0 0 0 0 
+memoria_video[1].marciano 0 0 0 1 1 
+memoria_video[1].muerto 0 0 1 0 1 
+memoria_video[1].disparo 0 1 0 0 1 
+memoria_video[1].nave 1 0 0 0 1 

@@ -1,0 +1,10 @@
+Fitter Status : Successful - Tue Jan 18 17:57:45 2011
+Quartus II Version : 6.0 Build 202 06/20/2006 SP 1 SJ Web Edition
+Revision Name : Space_Invaders_Ultimate
+Top-level Entity Name : space_invaders_ultimate
+Family : FLEX10K
+Device : EPF10K70RC240-4
+Timing Models : Final
+Total logic elements : 285 / 3,744 ( 8 % )
+Total pins : 22 / 189 ( 12 % )
+Total memory bits : 0 / 18,432 ( 0 % )

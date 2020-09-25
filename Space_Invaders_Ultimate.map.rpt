@@ -1,0 +1,1599 @@
+Analysis & Synthesis report for Space_Invaders_Ultimate
+Tue Jan 18 17:57:32 2011
+Version 6.0 Build 202 06/20/2006 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. State Machine - |space_invaders_ultimate|memoria_video[108]
+  8. State Machine - |space_invaders_ultimate|memoria_video[107]
+  9. State Machine - |space_invaders_ultimate|memoria_video[106]
+ 10. State Machine - |space_invaders_ultimate|memoria_video[105]
+ 11. State Machine - |space_invaders_ultimate|memoria_video[104]
+ 12. State Machine - |space_invaders_ultimate|memoria_video[103]
+ 13. State Machine - |space_invaders_ultimate|memoria_video[102]
+ 14. State Machine - |space_invaders_ultimate|memoria_video[101]
+ 15. State Machine - |space_invaders_ultimate|memoria_video[100]
+ 16. State Machine - |space_invaders_ultimate|memoria_video[99]
+ 17. State Machine - |space_invaders_ultimate|memoria_video[98]
+ 18. State Machine - |space_invaders_ultimate|memoria_video[97]
+ 19. State Machine - |space_invaders_ultimate|memoria_video[1]
+ 20. General Register Statistics
+ 21. Inverted Register Statistics
+ 22. Source assignments for Top-level Entity: |Space_Invaders_Ultimate
+ 23. Parameter Settings for Inferred Entity Instance: lpm_counter:contador_botones_rtl_0
+ 24. Parameter Settings for Inferred Entity Instance: lpm_counter:v_cnt_rtl_1
+ 25. Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add2
+ 26. Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add3
+ 27. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
+ 28. Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add7
+ 29. Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add6
+ 30. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2006 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                               ;
++-----------------------------+----------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Tue Jan 18 17:57:32 2011        ;
+; Quartus II Version          ; 6.0 Build 202 06/20/2006 SP 1 SJ Web Edition ;
+; Revision Name               ; Space_Invaders_Ultimate                      ;
+; Top-level Entity Name       ; space_invaders_ultimate                      ;
+; Family                      ; FLEX10K                                      ;
+; Total logic elements        ; 285                                          ;
+; Total pins                  ; 22                                           ;
+; Total memory bits           ; 0                                            ;
++-----------------------------+----------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                  ;
++------------------------------------------------------------+-------------------------+-------------------------+
+; Option                                                     ; Setting                 ; Default Value           ;
++------------------------------------------------------------+-------------------------+-------------------------+
+; Device                                                     ; EPF10K70RC240-4         ;                         ;
+; Top-level entity name                                      ; Space_Invaders_Ultimate ; Space_Invaders_Ultimate ;
+; Family name                                                ; FLEX10K                 ; Stratix                 ;
+; Use smart compilation                                      ; Off                     ; Off                     ;
+; Create Debugging Nodes for IP Cores                        ; Off                     ; Off                     ;
+; Preserve fewer node names                                  ; On                      ; On                      ;
+; Disable OpenCore Plus hardware evaluation                  ; Off                     ; Off                     ;
+; Verilog Version                                            ; Verilog_2001            ; Verilog_2001            ;
+; VHDL Version                                               ; VHDL93                  ; VHDL93                  ;
+; State Machine Processing                                   ; Auto                    ; Auto                    ;
+; Extract Verilog State Machines                             ; On                      ; On                      ;
+; Extract VHDL State Machines                                ; On                      ; On                      ;
+; Add Pass-Through Logic to Inferred RAMs                    ; On                      ; On                      ;
+; NOT Gate Push-Back                                         ; On                      ; On                      ;
+; Power-Up Don't Care                                        ; On                      ; On                      ;
+; Remove Redundant Logic Cells                               ; Off                     ; Off                     ;
+; Remove Duplicate Registers                                 ; On                      ; On                      ;
+; Ignore CARRY Buffers                                       ; Off                     ; Off                     ;
+; Ignore CASCADE Buffers                                     ; Off                     ; Off                     ;
+; Ignore GLOBAL Buffers                                      ; Off                     ; Off                     ;
+; Ignore ROW GLOBAL Buffers                                  ; Off                     ; Off                     ;
+; Ignore LCELL Buffers                                       ; Off                     ; Off                     ;
+; Ignore SOFT Buffers                                        ; On                      ; On                      ;
+; Limit AHDL Integers to 32 Bits                             ; Off                     ; Off                     ;
+; Auto Implement in ROM                                      ; Off                     ; Off                     ;
+; Optimization Technique -- FLEX 10K/10KE/10KA/ACEX 1K       ; Area                    ; Area                    ;
+; Carry Chain Length -- FLEX 10K                             ; 32                      ; 32                      ;
+; Cascade Chain Length                                       ; 2                       ; 2                       ;
+; Auto Carry Chains                                          ; On                      ; On                      ;
+; Auto Open-Drain Pins                                       ; On                      ; On                      ;
+; Remove Duplicate Logic                                     ; On                      ; On                      ;
+; Auto ROM Replacement                                       ; On                      ; On                      ;
+; Auto RAM Replacement                                       ; On                      ; On                      ;
+; Auto Clock Enable Replacement                              ; On                      ; On                      ;
+; Auto Resource Sharing                                      ; Off                     ; Off                     ;
+; Allow Any RAM Size For Recognition                         ; Off                     ; Off                     ;
+; Allow Any ROM Size For Recognition                         ; Off                     ; Off                     ;
+; Ignore translate_off and translate_on Synthesis Directives ; Off                     ; Off                     ;
+; Show Parameter Settings Tables in Synthesis Report         ; On                      ; On                      ;
+; HDL message level                                          ; Level2                  ; Level2                  ;
++------------------------------------------------------------+-------------------------+-------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                               ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                     ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------+
+; Space_Invaders_Ultimate.vhd      ; yes             ; User VHDL File               ; C:/Documents and Settings/julionl/Escritorio/Space_Invaders_Ultimate/Space_Invaders_Ultimate.vhd ;
+; lpm_counter.tdf                  ; yes             ; Megafunction                 ; c:/dcse/altera/quartus60/libraries/megafunctions/lpm_counter.tdf                                 ;
+; lpm_constant.inc                 ; yes             ; Other                        ; c:/dcse/altera/quartus60/libraries/megafunctions/lpm_constant.inc                                ;
+; lpm_decode.inc                   ; yes             ; Other                        ; c:/dcse/altera/quartus60/libraries/megafunctions/lpm_decode.inc                                  ;
+; lpm_add_sub.inc                  ; yes             ; Other                        ; c:/dcse/altera/quartus60/libraries/megafunctions/lpm_add_sub.inc                                 ;
+; cmpconst.inc                     ; yes             ; Other                        ; c:/dcse/altera/quartus60/libraries/megafunctions/cmpconst.inc                                    ;
+; lpm_compare.inc                  ; yes             ; Other                        ; c:/dcse/altera/quartus60/libraries/megafunctions/lpm_compare.inc                                 ;
+; lpm_counter.inc                  ; yes             ; Other                        ; c:/dcse/altera/quartus60/libraries/megafunctions/lpm_counter.inc                                 ;
+; dffeea.inc                       ; yes             ; Other                        ; c:/dcse/altera/quartus60/libraries/megafunctions/dffeea.inc                                      ;
+; alt_synch_counter.inc            ; yes             ; Other                        ; c:/dcse/altera/quartus60/libraries/megafunctions/alt_synch_counter.inc                           ;
+; alt_synch_counter_f.inc          ; yes             ; Other                        ; c:/dcse/altera/quartus60/libraries/megafunctions/alt_synch_counter_f.inc                         ;
+; alt_counter_f10ke.inc            ; yes             ; Other                        ; c:/dcse/altera/quartus60/libraries/megafunctions/alt_counter_f10ke.inc                           ;
+; alt_counter_stratix.inc          ; yes             ; Other                        ; c:/dcse/altera/quartus60/libraries/megafunctions/alt_counter_stratix.inc                         ;
+; aglobal60.inc                    ; yes             ; Other                        ; c:/dcse/altera/quartus60/libraries/megafunctions/aglobal60.inc                                   ;
+; alt_counter_f10ke.tdf            ; yes             ; Megafunction                 ; c:/dcse/altera/quartus60/libraries/megafunctions/alt_counter_f10ke.tdf                           ;
+; flex10ke_lcell.inc               ; yes             ; Other                        ; c:/dcse/altera/quartus60/libraries/megafunctions/flex10ke_lcell.inc                              ;
+; lpm_add_sub.tdf                  ; yes             ; Megafunction                 ; c:/dcse/altera/quartus60/libraries/megafunctions/lpm_add_sub.tdf                                 ;
+; addcore.inc                      ; yes             ; Other                        ; c:/dcse/altera/quartus60/libraries/megafunctions/addcore.inc                                     ;
+; look_add.inc                     ; yes             ; Other                        ; c:/dcse/altera/quartus60/libraries/megafunctions/look_add.inc                                    ;
+; bypassff.inc                     ; yes             ; Other                        ; c:/dcse/altera/quartus60/libraries/megafunctions/bypassff.inc                                    ;
+; altshift.inc                     ; yes             ; Other                        ; c:/dcse/altera/quartus60/libraries/megafunctions/altshift.inc                                    ;
+; alt_stratix_add_sub.inc          ; yes             ; Other                        ; c:/dcse/altera/quartus60/libraries/megafunctions/alt_stratix_add_sub.inc                         ;
+; alt_mercury_add_sub.inc          ; yes             ; Other                        ; c:/dcse/altera/quartus60/libraries/megafunctions/alt_mercury_add_sub.inc                         ;
+; addcore.tdf                      ; yes             ; Megafunction                 ; c:/dcse/altera/quartus60/libraries/megafunctions/addcore.tdf                                     ;
+; a_csnbuffer.inc                  ; yes             ; Other                        ; c:/dcse/altera/quartus60/libraries/megafunctions/a_csnbuffer.inc                                 ;
+; a_csnbuffer.tdf                  ; yes             ; Megafunction                 ; c:/dcse/altera/quartus60/libraries/megafunctions/a_csnbuffer.tdf                                 ;
+; altshift.tdf                     ; yes             ; Megafunction                 ; c:/dcse/altera/quartus60/libraries/megafunctions/altshift.tdf                                    ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/dcse/altera/quartus60/libraries/megafunctions/lpm_divide.tdf                                  ;
+; abs_divider.inc                  ; yes             ; Other                        ; c:/dcse/altera/quartus60/libraries/megafunctions/abs_divider.inc                                 ;
+; sign_div_unsign.inc              ; yes             ; Other                        ; c:/dcse/altera/quartus60/libraries/megafunctions/sign_div_unsign.inc                             ;
+; db/lpm_divide_npl.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/julionl/Escritorio/Space_Invaders_Ultimate/db/lpm_divide_npl.tdf       ;
+; db/sign_div_unsign_9kh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/julionl/Escritorio/Space_Invaders_Ultimate/db/sign_div_unsign_9kh.tdf  ;
+; db/alt_u_div_kke.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/julionl/Escritorio/Space_Invaders_Ultimate/db/alt_u_div_kke.tdf        ;
+; db/add_sub_a9c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/julionl/Escritorio/Space_Invaders_Ultimate/db/add_sub_a9c.tdf          ;
+; db/add_sub_b9c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/julionl/Escritorio/Space_Invaders_Ultimate/db/add_sub_b9c.tdf          ;
+; db/add_sub_c9c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/julionl/Escritorio/Space_Invaders_Ultimate/db/add_sub_c9c.tdf          ;
+; db/add_sub_d9c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/julionl/Escritorio/Space_Invaders_Ultimate/db/add_sub_d9c.tdf          ;
+; db/add_sub_e9c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/julionl/Escritorio/Space_Invaders_Ultimate/db/add_sub_e9c.tdf          ;
+; db/add_sub_f9c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/julionl/Escritorio/Space_Invaders_Ultimate/db/add_sub_f9c.tdf          ;
+; db/add_sub_g9c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/julionl/Escritorio/Space_Invaders_Ultimate/db/add_sub_g9c.tdf          ;
+; db/add_sub_f5c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/julionl/Escritorio/Space_Invaders_Ultimate/db/add_sub_f5c.tdf          ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary ;
++-----------------------------------+---------+
+; Resource                          ; Usage   ;
++-----------------------------------+---------+
+; Total logic elements              ; 285     ;
+; Total combinational functions     ; 275     ;
+;     -- Total 4-input functions    ; 113     ;
+;     -- Total 3-input functions    ; 42      ;
+;     -- Total 2-input functions    ; 58      ;
+;     -- Total 1-input functions    ; 36      ;
+;     -- Total 0-input functions    ; 26      ;
+; Combinational cells for routing   ; 0       ;
+; Total registers                   ; 104     ;
+; Total logic cells in carry chains ; 72      ;
+; I/O pins                          ; 22      ;
+; Maximum fan-out node              ; clk     ;
+; Maximum fan-out                   ; 74      ;
+; Total fan-out                     ; 942     ;
+; Average fan-out                   ; 3.07    ;
++-----------------------------------+---------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                             ;
++-----------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------+
+; Compilation Hierarchy Node              ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                                                            ;
++-----------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------+
+; |space_invaders_ultimate                ; 285 (190)   ; 104          ; 0           ; 22   ; 181 (118)    ; 10 (10)           ; 94 (62)          ; 72 (1)          ; 0 (0)      ; |space_invaders_ultimate                                                                                                                       ;
+;    |lpm_add_sub:Add2|                   ; 4 (0)       ; 0            ; 0           ; 0    ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 4 (0)           ; 0 (0)      ; |space_invaders_ultimate|lpm_add_sub:Add2                                                                                                      ;
+;       |addcore:adder|                   ; 4 (1)       ; 0            ; 0           ; 0    ; 4 (1)        ; 0 (0)             ; 0 (0)            ; 4 (1)           ; 0 (0)      ; |space_invaders_ultimate|lpm_add_sub:Add2|addcore:adder                                                                                        ;
+;          |a_csnbuffer:result_node|      ; 3 (3)       ; 0            ; 0           ; 0    ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 3 (3)           ; 0 (0)      ; |space_invaders_ultimate|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node                                                                ;
+;    |lpm_add_sub:Add3|                   ; 9 (0)       ; 0            ; 0           ; 0    ; 9 (0)        ; 0 (0)             ; 0 (0)            ; 9 (0)           ; 0 (0)      ; |space_invaders_ultimate|lpm_add_sub:Add3                                                                                                      ;
+;       |addcore:adder|                   ; 9 (1)       ; 0            ; 0           ; 0    ; 9 (1)        ; 0 (0)             ; 0 (0)            ; 9 (1)           ; 0 (0)      ; |space_invaders_ultimate|lpm_add_sub:Add3|addcore:adder                                                                                        ;
+;          |a_csnbuffer:result_node|      ; 8 (8)       ; 0            ; 0           ; 0    ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 8 (8)           ; 0 (0)      ; |space_invaders_ultimate|lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node                                                                ;
+;    |lpm_add_sub:Add6|                   ; 7 (0)       ; 0            ; 0           ; 0    ; 7 (0)        ; 0 (0)             ; 0 (0)            ; 7 (0)           ; 0 (0)      ; |space_invaders_ultimate|lpm_add_sub:Add6                                                                                                      ;
+;       |addcore:adder|                   ; 7 (1)       ; 0            ; 0           ; 0    ; 7 (1)        ; 0 (0)             ; 0 (0)            ; 7 (1)           ; 0 (0)      ; |space_invaders_ultimate|lpm_add_sub:Add6|addcore:adder                                                                                        ;
+;          |a_csnbuffer:result_node|      ; 6 (6)       ; 0            ; 0           ; 0    ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 6 (6)           ; 0 (0)      ; |space_invaders_ultimate|lpm_add_sub:Add6|addcore:adder|a_csnbuffer:result_node                                                                ;
+;    |lpm_add_sub:Add7|                   ; 7 (0)       ; 0            ; 0           ; 0    ; 7 (0)        ; 0 (0)             ; 0 (0)            ; 7 (0)           ; 0 (0)      ; |space_invaders_ultimate|lpm_add_sub:Add7                                                                                                      ;
+;       |addcore:adder|                   ; 7 (1)       ; 0            ; 0           ; 0    ; 7 (1)        ; 0 (0)             ; 0 (0)            ; 7 (1)           ; 0 (0)      ; |space_invaders_ultimate|lpm_add_sub:Add7|addcore:adder                                                                                        ;
+;          |a_csnbuffer:result_node|      ; 6 (6)       ; 0            ; 0           ; 0    ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 6 (6)           ; 0 (0)      ; |space_invaders_ultimate|lpm_add_sub:Add7|addcore:adder|a_csnbuffer:result_node                                                                ;
+;    |lpm_counter:contador_botones_rtl_0| ; 22 (0)      ; 22           ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 22 (0)           ; 22 (0)          ; 0 (0)      ; |space_invaders_ultimate|lpm_counter:contador_botones_rtl_0                                                                                    ;
+;       |alt_counter_f10ke:wysi_counter|  ; 22 (22)     ; 22           ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 22 (22)          ; 22 (22)         ; 0 (0)      ; |space_invaders_ultimate|lpm_counter:contador_botones_rtl_0|alt_counter_f10ke:wysi_counter                                                     ;
+;    |lpm_counter:v_cnt_rtl_1|            ; 10 (0)      ; 10           ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 10 (0)           ; 10 (0)          ; 0 (0)      ; |space_invaders_ultimate|lpm_counter:v_cnt_rtl_1                                                                                               ;
+;       |alt_counter_f10ke:wysi_counter|  ; 10 (10)     ; 10           ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 10 (10)          ; 10 (10)         ; 0 (0)      ; |space_invaders_ultimate|lpm_counter:v_cnt_rtl_1|alt_counter_f10ke:wysi_counter                                                                ;
+;    |lpm_divide:Mod0|                    ; 36 (0)      ; 0            ; 0           ; 0    ; 36 (0)       ; 0 (0)             ; 0 (0)            ; 12 (0)          ; 0 (0)      ; |space_invaders_ultimate|lpm_divide:Mod0                                                                                                       ;
+;       |lpm_divide_npl:auto_generated|   ; 36 (0)      ; 0            ; 0           ; 0    ; 36 (0)       ; 0 (0)             ; 0 (0)            ; 12 (0)          ; 0 (0)      ; |space_invaders_ultimate|lpm_divide:Mod0|lpm_divide_npl:auto_generated                                                                         ;
+;          |sign_div_unsign_9kh:divider|  ; 36 (0)      ; 0            ; 0           ; 0    ; 36 (0)       ; 0 (0)             ; 0 (0)            ; 12 (0)          ; 0 (0)      ; |space_invaders_ultimate|lpm_divide:Mod0|lpm_divide_npl:auto_generated|sign_div_unsign_9kh:divider                                             ;
+;             |alt_u_div_kke:divider|     ; 36 (16)     ; 0            ; 0           ; 0    ; 36 (16)      ; 0 (0)             ; 0 (0)            ; 12 (0)          ; 0 (0)      ; |space_invaders_ultimate|lpm_divide:Mod0|lpm_divide_npl:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kke:divider                       ;
+;                |add_sub_d9c:add_sub_3|  ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |space_invaders_ultimate|lpm_divide:Mod0|lpm_divide_npl:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kke:divider|add_sub_d9c:add_sub_3 ;
+;                |add_sub_e9c:add_sub_4|  ; 7 (7)       ; 0            ; 0           ; 0    ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 1 (1)           ; 0 (0)      ; |space_invaders_ultimate|lpm_divide:Mod0|lpm_divide_npl:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kke:divider|add_sub_e9c:add_sub_4 ;
+;                |add_sub_f9c:add_sub_5|  ; 5 (5)       ; 0            ; 0           ; 0    ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 5 (5)           ; 0 (0)      ; |space_invaders_ultimate|lpm_divide:Mod0|lpm_divide_npl:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kke:divider|add_sub_f9c:add_sub_5 ;
+;                |add_sub_g9c:add_sub_6|  ; 6 (6)       ; 0            ; 0           ; 0    ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 6 (6)           ; 0 (0)      ; |space_invaders_ultimate|lpm_divide:Mod0|lpm_divide_npl:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kke:divider|add_sub_g9c:add_sub_6 ;
++-----------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |space_invaders_ultimate|memoria_video[108]                                                                                                            ;
++-----------------------------+-------------------------+----------------------------+---------------------------+-----------------------------+-------------------------+
+; Name                        ; memoria_video[108].nave ; memoria_video[108].disparo ; memoria_video[108].muerto ; memoria_video[108].marciano ; memoria_video[108].nada ;
++-----------------------------+-------------------------+----------------------------+---------------------------+-----------------------------+-------------------------+
+; memoria_video[108].nada     ; 0                       ; 0                          ; 0                         ; 0                           ; 0                       ;
+; memoria_video[108].marciano ; 0                       ; 0                          ; 0                         ; 1                           ; 1                       ;
+; memoria_video[108].muerto   ; 0                       ; 0                          ; 1                         ; 0                           ; 1                       ;
+; memoria_video[108].disparo  ; 0                       ; 1                          ; 0                         ; 0                           ; 1                       ;
+; memoria_video[108].nave     ; 1                       ; 0                          ; 0                         ; 0                           ; 1                       ;
++-----------------------------+-------------------------+----------------------------+---------------------------+-----------------------------+-------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |space_invaders_ultimate|memoria_video[107]                                                                                                            ;
++-----------------------------+-------------------------+----------------------------+---------------------------+-----------------------------+-------------------------+
+; Name                        ; memoria_video[107].nave ; memoria_video[107].disparo ; memoria_video[107].muerto ; memoria_video[107].marciano ; memoria_video[107].nada ;
++-----------------------------+-------------------------+----------------------------+---------------------------+-----------------------------+-------------------------+
+; memoria_video[107].nada     ; 0                       ; 0                          ; 0                         ; 0                           ; 0                       ;
+; memoria_video[107].marciano ; 0                       ; 0                          ; 0                         ; 1                           ; 1                       ;
+; memoria_video[107].muerto   ; 0                       ; 0                          ; 1                         ; 0                           ; 1                       ;
+; memoria_video[107].disparo  ; 0                       ; 1                          ; 0                         ; 0                           ; 1                       ;
+; memoria_video[107].nave     ; 1                       ; 0                          ; 0                         ; 0                           ; 1                       ;
++-----------------------------+-------------------------+----------------------------+---------------------------+-----------------------------+-------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |space_invaders_ultimate|memoria_video[106]                                                                                                            ;
++-----------------------------+-------------------------+----------------------------+---------------------------+-----------------------------+-------------------------+
+; Name                        ; memoria_video[106].nave ; memoria_video[106].disparo ; memoria_video[106].muerto ; memoria_video[106].marciano ; memoria_video[106].nada ;
++-----------------------------+-------------------------+----------------------------+---------------------------+-----------------------------+-------------------------+
+; memoria_video[106].nada     ; 0                       ; 0                          ; 0                         ; 0                           ; 0                       ;
+; memoria_video[106].marciano ; 0                       ; 0                          ; 0                         ; 1                           ; 1                       ;
+; memoria_video[106].muerto   ; 0                       ; 0                          ; 1                         ; 0                           ; 1                       ;
+; memoria_video[106].disparo  ; 0                       ; 1                          ; 0                         ; 0                           ; 1                       ;
+; memoria_video[106].nave     ; 1                       ; 0                          ; 0                         ; 0                           ; 1                       ;
++-----------------------------+-------------------------+----------------------------+---------------------------+-----------------------------+-------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |space_invaders_ultimate|memoria_video[105]                                                                                                            ;
++-----------------------------+-------------------------+----------------------------+---------------------------+-----------------------------+-------------------------+
+; Name                        ; memoria_video[105].nave ; memoria_video[105].disparo ; memoria_video[105].muerto ; memoria_video[105].marciano ; memoria_video[105].nada ;
++-----------------------------+-------------------------+----------------------------+---------------------------+-----------------------------+-------------------------+
+; memoria_video[105].nada     ; 0                       ; 0                          ; 0                         ; 0                           ; 0                       ;
+; memoria_video[105].marciano ; 0                       ; 0                          ; 0                         ; 1                           ; 1                       ;
+; memoria_video[105].muerto   ; 0                       ; 0                          ; 1                         ; 0                           ; 1                       ;
+; memoria_video[105].disparo  ; 0                       ; 1                          ; 0                         ; 0                           ; 1                       ;
+; memoria_video[105].nave     ; 1                       ; 0                          ; 0                         ; 0                           ; 1                       ;
++-----------------------------+-------------------------+----------------------------+---------------------------+-----------------------------+-------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |space_invaders_ultimate|memoria_video[104]                                                                                                            ;
++-----------------------------+-------------------------+----------------------------+---------------------------+-----------------------------+-------------------------+
+; Name                        ; memoria_video[104].nave ; memoria_video[104].disparo ; memoria_video[104].muerto ; memoria_video[104].marciano ; memoria_video[104].nada ;
++-----------------------------+-------------------------+----------------------------+---------------------------+-----------------------------+-------------------------+
+; memoria_video[104].nada     ; 0                       ; 0                          ; 0                         ; 0                           ; 0                       ;
+; memoria_video[104].marciano ; 0                       ; 0                          ; 0                         ; 1                           ; 1                       ;
+; memoria_video[104].muerto   ; 0                       ; 0                          ; 1                         ; 0                           ; 1                       ;
+; memoria_video[104].disparo  ; 0                       ; 1                          ; 0                         ; 0                           ; 1                       ;
+; memoria_video[104].nave     ; 1                       ; 0                          ; 0                         ; 0                           ; 1                       ;
++-----------------------------+-------------------------+----------------------------+---------------------------+-----------------------------+-------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |space_invaders_ultimate|memoria_video[103]                                                                                                            ;
++-----------------------------+-------------------------+----------------------------+---------------------------+-----------------------------+-------------------------+
+; Name                        ; memoria_video[103].nave ; memoria_video[103].disparo ; memoria_video[103].muerto ; memoria_video[103].marciano ; memoria_video[103].nada ;
++-----------------------------+-------------------------+----------------------------+---------------------------+-----------------------------+-------------------------+
+; memoria_video[103].nada     ; 0                       ; 0                          ; 0                         ; 0                           ; 0                       ;
+; memoria_video[103].marciano ; 0                       ; 0                          ; 0                         ; 1                           ; 1                       ;
+; memoria_video[103].muerto   ; 0                       ; 0                          ; 1                         ; 0                           ; 1                       ;
+; memoria_video[103].disparo  ; 0                       ; 1                          ; 0                         ; 0                           ; 1                       ;
+; memoria_video[103].nave     ; 1                       ; 0                          ; 0                         ; 0                           ; 1                       ;
++-----------------------------+-------------------------+----------------------------+---------------------------+-----------------------------+-------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |space_invaders_ultimate|memoria_video[102]                                                                                                            ;
++-----------------------------+-------------------------+----------------------------+---------------------------+-----------------------------+-------------------------+
+; Name                        ; memoria_video[102].nave ; memoria_video[102].disparo ; memoria_video[102].muerto ; memoria_video[102].marciano ; memoria_video[102].nada ;
++-----------------------------+-------------------------+----------------------------+---------------------------+-----------------------------+-------------------------+
+; memoria_video[102].nada     ; 0                       ; 0                          ; 0                         ; 0                           ; 0                       ;
+; memoria_video[102].marciano ; 0                       ; 0                          ; 0                         ; 1                           ; 1                       ;
+; memoria_video[102].muerto   ; 0                       ; 0                          ; 1                         ; 0                           ; 1                       ;
+; memoria_video[102].disparo  ; 0                       ; 1                          ; 0                         ; 0                           ; 1                       ;
+; memoria_video[102].nave     ; 1                       ; 0                          ; 0                         ; 0                           ; 1                       ;
++-----------------------------+-------------------------+----------------------------+---------------------------+-----------------------------+-------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |space_invaders_ultimate|memoria_video[101]                                                                                                            ;
++-----------------------------+-------------------------+----------------------------+---------------------------+-----------------------------+-------------------------+
+; Name                        ; memoria_video[101].nave ; memoria_video[101].disparo ; memoria_video[101].muerto ; memoria_video[101].marciano ; memoria_video[101].nada ;
++-----------------------------+-------------------------+----------------------------+---------------------------+-----------------------------+-------------------------+
+; memoria_video[101].nada     ; 0                       ; 0                          ; 0                         ; 0                           ; 0                       ;
+; memoria_video[101].marciano ; 0                       ; 0                          ; 0                         ; 1                           ; 1                       ;
+; memoria_video[101].muerto   ; 0                       ; 0                          ; 1                         ; 0                           ; 1                       ;
+; memoria_video[101].disparo  ; 0                       ; 1                          ; 0                         ; 0                           ; 1                       ;
+; memoria_video[101].nave     ; 1                       ; 0                          ; 0                         ; 0                           ; 1                       ;
++-----------------------------+-------------------------+----------------------------+---------------------------+-----------------------------+-------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |space_invaders_ultimate|memoria_video[100]                                                                                                            ;
++-----------------------------+-------------------------+----------------------------+---------------------------+-----------------------------+-------------------------+
+; Name                        ; memoria_video[100].nave ; memoria_video[100].disparo ; memoria_video[100].muerto ; memoria_video[100].marciano ; memoria_video[100].nada ;
++-----------------------------+-------------------------+----------------------------+---------------------------+-----------------------------+-------------------------+
+; memoria_video[100].nada     ; 0                       ; 0                          ; 0                         ; 0                           ; 0                       ;
+; memoria_video[100].marciano ; 0                       ; 0                          ; 0                         ; 1                           ; 1                       ;
+; memoria_video[100].muerto   ; 0                       ; 0                          ; 1                         ; 0                           ; 1                       ;
+; memoria_video[100].disparo  ; 0                       ; 1                          ; 0                         ; 0                           ; 1                       ;
+; memoria_video[100].nave     ; 1                       ; 0                          ; 0                         ; 0                           ; 1                       ;
++-----------------------------+-------------------------+----------------------------+---------------------------+-----------------------------+-------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |space_invaders_ultimate|memoria_video[99]                                                                                                       ;
++----------------------------+------------------------+---------------------------+--------------------------+----------------------------+------------------------+
+; Name                       ; memoria_video[99].nave ; memoria_video[99].disparo ; memoria_video[99].muerto ; memoria_video[99].marciano ; memoria_video[99].nada ;
++----------------------------+------------------------+---------------------------+--------------------------+----------------------------+------------------------+
+; memoria_video[99].nada     ; 0                      ; 0                         ; 0                        ; 0                          ; 0                      ;
+; memoria_video[99].marciano ; 0                      ; 0                         ; 0                        ; 1                          ; 1                      ;
+; memoria_video[99].muerto   ; 0                      ; 0                         ; 1                        ; 0                          ; 1                      ;
+; memoria_video[99].disparo  ; 0                      ; 1                         ; 0                        ; 0                          ; 1                      ;
+; memoria_video[99].nave     ; 1                      ; 0                         ; 0                        ; 0                          ; 1                      ;
++----------------------------+------------------------+---------------------------+--------------------------+----------------------------+------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |space_invaders_ultimate|memoria_video[98]                                                                                                       ;
++----------------------------+------------------------+---------------------------+--------------------------+----------------------------+------------------------+
+; Name                       ; memoria_video[98].nave ; memoria_video[98].disparo ; memoria_video[98].muerto ; memoria_video[98].marciano ; memoria_video[98].nada ;
++----------------------------+------------------------+---------------------------+--------------------------+----------------------------+------------------------+
+; memoria_video[98].nada     ; 0                      ; 0                         ; 0                        ; 0                          ; 0                      ;
+; memoria_video[98].marciano ; 0                      ; 0                         ; 0                        ; 1                          ; 1                      ;
+; memoria_video[98].muerto   ; 0                      ; 0                         ; 1                        ; 0                          ; 1                      ;
+; memoria_video[98].disparo  ; 0                      ; 1                         ; 0                        ; 0                          ; 1                      ;
+; memoria_video[98].nave     ; 1                      ; 0                         ; 0                        ; 0                          ; 1                      ;
++----------------------------+------------------------+---------------------------+--------------------------+----------------------------+------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |space_invaders_ultimate|memoria_video[97]                                                                                                       ;
++----------------------------+------------------------+---------------------------+--------------------------+----------------------------+------------------------+
+; Name                       ; memoria_video[97].nave ; memoria_video[97].disparo ; memoria_video[97].muerto ; memoria_video[97].marciano ; memoria_video[97].nada ;
++----------------------------+------------------------+---------------------------+--------------------------+----------------------------+------------------------+
+; memoria_video[97].nada     ; 0                      ; 0                         ; 0                        ; 0                          ; 0                      ;
+; memoria_video[97].marciano ; 0                      ; 0                         ; 0                        ; 1                          ; 1                      ;
+; memoria_video[97].muerto   ; 0                      ; 0                         ; 1                        ; 0                          ; 1                      ;
+; memoria_video[97].disparo  ; 0                      ; 1                         ; 0                        ; 0                          ; 1                      ;
+; memoria_video[97].nave     ; 1                      ; 0                         ; 0                        ; 0                          ; 1                      ;
++----------------------------+------------------------+---------------------------+--------------------------+----------------------------+------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |space_invaders_ultimate|memoria_video[1]                                                                                                  ;
++---------------------------+-----------------------+--------------------------+-------------------------+---------------------------+-----------------------+
+; Name                      ; memoria_video[1].nave ; memoria_video[1].disparo ; memoria_video[1].muerto ; memoria_video[1].marciano ; memoria_video[1].nada ;
++---------------------------+-----------------------+--------------------------+-------------------------+---------------------------+-----------------------+
+; memoria_video[1].nada     ; 0                     ; 0                        ; 0                       ; 0                         ; 0                     ;
+; memoria_video[1].marciano ; 0                     ; 0                        ; 0                       ; 1                         ; 1                     ;
+; memoria_video[1].muerto   ; 0                     ; 0                        ; 1                       ; 0                         ; 1                     ;
+; memoria_video[1].disparo  ; 0                     ; 1                        ; 0                       ; 0                         ; 1                     ;
+; memoria_video[1].nave     ; 1                     ; 0                        ; 0                       ; 0                         ; 1                     ;
++---------------------------+-----------------------+--------------------------+-------------------------+---------------------------+-----------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 104   ;
+; Number of registers using Synchronous Clear  ; 10    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 21    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; cont_h[0]                              ; 8       ;
+; cont_v[0]                              ; 8       ;
+; primera_vez                            ; 10      ;
+; pos_nave[2]                            ; 4       ;
+; pos_nave[1]                            ; 5       ;
+; indice[0]                              ; 18      ;
+; Total number of inverted registers = 6 ;         ;
++----------------------------------------+---------+
+
+
++-------------------------------------------------------------------+
+; Source assignments for Top-level Entity: |Space_Invaders_Ultimate ;
++----------------+-------+------+-----------------------------------+
+; Assignment     ; Value ; From ; To                                ;
++----------------+-------+------+-----------------------------------+
+; POWER_UP_LEVEL ; Low   ; -    ; v_cnt[0]                          ;
+; POWER_UP_LEVEL ; Low   ; -    ; v_cnt[1]                          ;
+; POWER_UP_LEVEL ; Low   ; -    ; v_cnt[2]                          ;
+; POWER_UP_LEVEL ; Low   ; -    ; v_cnt[3]                          ;
+; POWER_UP_LEVEL ; Low   ; -    ; v_cnt[4]                          ;
+; POWER_UP_LEVEL ; Low   ; -    ; v_cnt[5]                          ;
+; POWER_UP_LEVEL ; Low   ; -    ; v_cnt[6]                          ;
+; POWER_UP_LEVEL ; Low   ; -    ; v_cnt[7]                          ;
+; POWER_UP_LEVEL ; Low   ; -    ; v_cnt[8]                          ;
+; POWER_UP_LEVEL ; Low   ; -    ; v_cnt[9]                          ;
+; POWER_UP_LEVEL ; High  ; -    ; indice[0]                         ;
+; POWER_UP_LEVEL ; Low   ; -    ; indice[1]                         ;
+; POWER_UP_LEVEL ; Low   ; -    ; indice[2]                         ;
+; POWER_UP_LEVEL ; Low   ; -    ; indice[3]                         ;
+; POWER_UP_LEVEL ; Low   ; -    ; indice[4]                         ;
+; POWER_UP_LEVEL ; Low   ; -    ; indice[5]                         ;
+; POWER_UP_LEVEL ; Low   ; -    ; indice[6]                         ;
+; POWER_UP_LEVEL ; High  ; -    ; cont_v[0]                         ;
+; POWER_UP_LEVEL ; Low   ; -    ; cont_v[1]                         ;
+; POWER_UP_LEVEL ; Low   ; -    ; cont_v[2]                         ;
+; POWER_UP_LEVEL ; Low   ; -    ; contador_vga_v[0]                 ;
+; POWER_UP_LEVEL ; Low   ; -    ; contador_vga_v[1]                 ;
+; POWER_UP_LEVEL ; Low   ; -    ; contador_vga_v[2]                 ;
+; POWER_UP_LEVEL ; Low   ; -    ; contador_vga_h[0]                 ;
+; POWER_UP_LEVEL ; Low   ; -    ; contador_vga_h[1]                 ;
+; POWER_UP_LEVEL ; Low   ; -    ; contador_vga_h[2]                 ;
+; POWER_UP_LEVEL ; High  ; -    ; cont_h[0]                         ;
+; POWER_UP_LEVEL ; Low   ; -    ; cont_h[1]                         ;
+; POWER_UP_LEVEL ; Low   ; -    ; cont_h[2]                         ;
+; POWER_UP_LEVEL ; Low   ; -    ; h_cnt[0]                          ;
+; POWER_UP_LEVEL ; Low   ; -    ; h_cnt[1]                          ;
+; POWER_UP_LEVEL ; Low   ; -    ; h_cnt[2]                          ;
+; POWER_UP_LEVEL ; Low   ; -    ; h_cnt[3]                          ;
+; POWER_UP_LEVEL ; Low   ; -    ; h_cnt[4]                          ;
+; POWER_UP_LEVEL ; Low   ; -    ; h_cnt[5]                          ;
+; POWER_UP_LEVEL ; Low   ; -    ; h_cnt[6]                          ;
+; POWER_UP_LEVEL ; Low   ; -    ; h_cnt[7]                          ;
+; POWER_UP_LEVEL ; Low   ; -    ; h_cnt[8]                          ;
+; POWER_UP_LEVEL ; Low   ; -    ; h_cnt[9]                          ;
+; POWER_UP_LEVEL ; Low   ; -    ; pos_nave[0]                       ;
+; POWER_UP_LEVEL ; High  ; -    ; pos_nave[1]                       ;
+; POWER_UP_LEVEL ; High  ; -    ; pos_nave[2]                       ;
+; POWER_UP_LEVEL ; Low   ; -    ; pos_nave[3]                       ;
+; POWER_UP_LEVEL ; High  ; -    ; primera_vez                       ;
+; POWER_UP_LEVEL ; Low   ; -    ; contador_botones[0]               ;
+; POWER_UP_LEVEL ; Low   ; -    ; contador_botones[1]               ;
+; POWER_UP_LEVEL ; Low   ; -    ; contador_botones[2]               ;
+; POWER_UP_LEVEL ; Low   ; -    ; contador_botones[3]               ;
+; POWER_UP_LEVEL ; Low   ; -    ; contador_botones[4]               ;
+; POWER_UP_LEVEL ; Low   ; -    ; contador_botones[5]               ;
+; POWER_UP_LEVEL ; Low   ; -    ; contador_botones[6]               ;
+; POWER_UP_LEVEL ; Low   ; -    ; contador_botones[7]               ;
+; POWER_UP_LEVEL ; Low   ; -    ; contador_botones[8]               ;
+; POWER_UP_LEVEL ; Low   ; -    ; contador_botones[9]               ;
+; POWER_UP_LEVEL ; Low   ; -    ; contador_botones[10]              ;
+; POWER_UP_LEVEL ; Low   ; -    ; contador_botones[11]              ;
+; POWER_UP_LEVEL ; Low   ; -    ; contador_botones[12]              ;
+; POWER_UP_LEVEL ; Low   ; -    ; contador_botones[13]              ;
+; POWER_UP_LEVEL ; Low   ; -    ; contador_botones[14]              ;
+; POWER_UP_LEVEL ; Low   ; -    ; contador_botones[15]              ;
+; POWER_UP_LEVEL ; Low   ; -    ; contador_botones[16]              ;
+; POWER_UP_LEVEL ; Low   ; -    ; contador_botones[17]              ;
+; POWER_UP_LEVEL ; Low   ; -    ; contador_botones[18]              ;
+; POWER_UP_LEVEL ; Low   ; -    ; contador_botones[19]              ;
+; POWER_UP_LEVEL ; Low   ; -    ; contador_botones[20]              ;
+; POWER_UP_LEVEL ; Low   ; -    ; contador_botones[21]              ;
+; POWER_UP_LEVEL ; Low   ; -    ; reloj_botones                     ;
++----------------+-------+------+-----------------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_counter:contador_botones_rtl_0 ;
++------------------------+-------------------+----------------------------------------+
+; Parameter Name         ; Value             ; Type                                   ;
++------------------------+-------------------+----------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON                ; AUTO_CARRY                             ;
+; IGNORE_CARRY_BUFFERS   ; OFF               ; IGNORE_CARRY                           ;
+; AUTO_CASCADE_CHAINS    ; ON                ; AUTO_CASCADE                           ;
+; IGNORE_CASCADE_BUFFERS ; OFF               ; IGNORE_CASCADE                         ;
+; LPM_WIDTH              ; 22                ; Untyped                                ;
+; LPM_DIRECTION          ; UP                ; Untyped                                ;
+; LPM_MODULUS            ; 0                 ; Untyped                                ;
+; LPM_AVALUE             ; UNUSED            ; Untyped                                ;
+; LPM_SVALUE             ; UNUSED            ; Untyped                                ;
+; LPM_PORT_UPDOWN        ; PORT_CONNECTIVITY ; Untyped                                ;
+; DEVICE_FAMILY          ; FLEX10K           ; Untyped                                ;
+; CARRY_CHAIN            ; MANUAL            ; Untyped                                ;
+; CARRY_CHAIN_LENGTH     ; 48                ; CARRY_CHAIN_LENGTH                     ;
+; NOT_GATE_PUSH_BACK     ; ON                ; NOT_GATE_PUSH_BACK                     ;
+; CARRY_CNT_EN           ; SMART             ; Untyped                                ;
+; LABWIDE_SCLR           ; ON                ; Untyped                                ;
+; USE_NEW_VERSION        ; TRUE              ; Untyped                                ;
+; CBXI_PARAMETER         ; NOTHING           ; Untyped                                ;
++------------------------+-------------------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_counter:v_cnt_rtl_1 ;
++------------------------+-------------------+-----------------------------+
+; Parameter Name         ; Value             ; Type                        ;
++------------------------+-------------------+-----------------------------+
+; AUTO_CARRY_CHAINS      ; ON                ; AUTO_CARRY                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF               ; IGNORE_CARRY                ;
+; AUTO_CASCADE_CHAINS    ; ON                ; AUTO_CASCADE                ;
+; IGNORE_CASCADE_BUFFERS ; OFF               ; IGNORE_CASCADE              ;
+; LPM_WIDTH              ; 10                ; Untyped                     ;
+; LPM_DIRECTION          ; UP                ; Untyped                     ;
+; LPM_MODULUS            ; 0                 ; Untyped                     ;
+; LPM_AVALUE             ; UNUSED            ; Untyped                     ;
+; LPM_SVALUE             ; UNUSED            ; Untyped                     ;
+; LPM_PORT_UPDOWN        ; PORT_CONNECTIVITY ; Untyped                     ;
+; DEVICE_FAMILY          ; FLEX10K           ; Untyped                     ;
+; CARRY_CHAIN            ; MANUAL            ; Untyped                     ;
+; CARRY_CHAIN_LENGTH     ; 48                ; CARRY_CHAIN_LENGTH          ;
+; NOT_GATE_PUSH_BACK     ; ON                ; NOT_GATE_PUSH_BACK          ;
+; CARRY_CNT_EN           ; SMART             ; Untyped                     ;
+; LABWIDE_SCLR           ; ON                ; Untyped                     ;
+; USE_NEW_VERSION        ; TRUE              ; Untyped                     ;
+; CBXI_PARAMETER         ; NOTHING           ; Untyped                     ;
++------------------------+-------------------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add2 ;
++------------------------+-------------+----------------------------+
+; Parameter Name         ; Value       ; Type                       ;
++------------------------+-------------+----------------------------+
+; LPM_WIDTH              ; 4           ; Untyped                    ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                    ;
+; LPM_DIRECTION          ; ADD         ; Untyped                    ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                    ;
+; LPM_PIPELINE           ; 0           ; Untyped                    ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                    ;
+; REGISTERED_AT_END      ; 0           ; Untyped                    ;
+; OPTIMIZE_FOR_SPEED     ; 1           ; Untyped                    ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                    ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                    ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH         ;
+; DEVICE_FAMILY          ; FLEX10K     ; Untyped                    ;
+; USE_WYS                ; OFF         ; Untyped                    ;
+; STYLE                  ; FAST        ; Untyped                    ;
+; CBXI_PARAMETER         ; add_sub_njh ; Untyped                    ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY               ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE               ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE             ;
++------------------------+-------------+----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add3 ;
++------------------------+-------------+----------------------------+
+; Parameter Name         ; Value       ; Type                       ;
++------------------------+-------------+----------------------------+
+; LPM_WIDTH              ; 10          ; Untyped                    ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                    ;
+; LPM_DIRECTION          ; ADD         ; Untyped                    ;
+; ONE_INPUT_IS_CONSTANT  ; YES         ; Untyped                    ;
+; LPM_PIPELINE           ; 0           ; Untyped                    ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                    ;
+; REGISTERED_AT_END      ; 0           ; Untyped                    ;
+; OPTIMIZE_FOR_SPEED     ; 1           ; Untyped                    ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                    ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                    ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH         ;
+; DEVICE_FAMILY          ; FLEX10K     ; Untyped                    ;
+; USE_WYS                ; OFF         ; Untyped                    ;
+; STYLE                  ; FAST        ; Untyped                    ;
+; CBXI_PARAMETER         ; add_sub_ooh ; Untyped                    ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY               ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE               ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE             ;
++------------------------+-------------+----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 7              ; Untyped                ;
+; LPM_WIDTHD             ; 7              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_npl ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 1              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add7 ;
++------------------------+-------------+----------------------------+
+; Parameter Name         ; Value       ; Type                       ;
++------------------------+-------------+----------------------------+
+; LPM_WIDTH              ; 7           ; Untyped                    ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                    ;
+; LPM_DIRECTION          ; ADD         ; Untyped                    ;
+; ONE_INPUT_IS_CONSTANT  ; YES         ; Untyped                    ;
+; LPM_PIPELINE           ; 0           ; Untyped                    ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                    ;
+; REGISTERED_AT_END      ; 0           ; Untyped                    ;
+; OPTIMIZE_FOR_SPEED     ; 1           ; Untyped                    ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                    ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                    ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH         ;
+; DEVICE_FAMILY          ; FLEX10K     ; Untyped                    ;
+; USE_WYS                ; OFF         ; Untyped                    ;
+; STYLE                  ; FAST        ; Untyped                    ;
+; CBXI_PARAMETER         ; add_sub_enh ; Untyped                    ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY               ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE               ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE             ;
++------------------------+-------------+----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add6 ;
++------------------------+-------------+----------------------------+
+; Parameter Name         ; Value       ; Type                       ;
++------------------------+-------------+----------------------------+
+; LPM_WIDTH              ; 7           ; Untyped                    ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                    ;
+; LPM_DIRECTION          ; ADD         ; Untyped                    ;
+; ONE_INPUT_IS_CONSTANT  ; YES         ; Untyped                    ;
+; LPM_PIPELINE           ; 0           ; Untyped                    ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                    ;
+; REGISTERED_AT_END      ; 0           ; Untyped                    ;
+; OPTIMIZE_FOR_SPEED     ; 1           ; Untyped                    ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                    ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                    ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH         ;
+; DEVICE_FAMILY          ; FLEX10K     ; Untyped                    ;
+; USE_WYS                ; OFF         ; Untyped                    ;
+; STYLE                  ; FAST        ; Untyped                    ;
+; CBXI_PARAMETER         ; add_sub_kch ; Untyped                    ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY               ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE               ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE             ;
++------------------------+-------------+----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 6.0 Build 202 06/20/2006 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Jan 18 17:57:25 2011
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Space_Invaders_Ultimate -c Space_Invaders_Ultimate
+Info: Found 2 design units, including 1 entities, in source file display.vhd
+    Info: Found design unit 1: display-arquitectura
+    Info: Found entity 1: display
+Warning: Can't analyze file -- file C:/Documents and Settings/julionl/Escritorio/Space_Invaders_Ultimate/space_invaders.vhd is missing
+Info: Found 2 design units, including 1 entities, in source file Space_Invaders_Ultimate.vhd
+    Info: Found design unit 1: space_invaders_ultimate-arquitectura
+    Info: Found entity 1: space_invaders_ultimate
+Info: Elaborating entity "Space_Invaders_Ultimate" for the top level hierarchy
+Warning (10034): Output port "display_unidades[6]" at Space_Invaders_Ultimate.vhd(24) has no driver
+Warning (10034): Output port "display_unidades[5]" at Space_Invaders_Ultimate.vhd(24) has no driver
+Warning (10034): Output port "display_unidades[4]" at Space_Invaders_Ultimate.vhd(24) has no driver
+Warning (10034): Output port "display_unidades[3]" at Space_Invaders_Ultimate.vhd(24) has no driver
+Warning (10034): Output port "display_unidades[2]" at Space_Invaders_Ultimate.vhd(24) has no driver
+Warning (10034): Output port "display_unidades[1]" at Space_Invaders_Ultimate.vhd(24) has no driver
+Warning (10034): Output port "display_unidades[0]" at Space_Invaders_Ultimate.vhd(24) has no driver
+Warning (10034): Output port "display_decenas[6]" at Space_Invaders_Ultimate.vhd(25) has no driver
+Warning (10034): Output port "display_decenas[5]" at Space_Invaders_Ultimate.vhd(25) has no driver
+Warning (10034): Output port "display_decenas[4]" at Space_Invaders_Ultimate.vhd(25) has no driver
+Warning (10034): Output port "display_decenas[3]" at Space_Invaders_Ultimate.vhd(25) has no driver
+Warning (10034): Output port "display_decenas[2]" at Space_Invaders_Ultimate.vhd(25) has no driver
+Warning (10034): Output port "display_decenas[1]" at Space_Invaders_Ultimate.vhd(25) has no driver
+Warning (10034): Output port "display_decenas[0]" at Space_Invaders_Ultimate.vhd(25) has no driver
+Warning (10030): Tied undriven net "memoria_video[2].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[2].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[2].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[2].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[2].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[3].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[3].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[3].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[3].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[3].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[4].nada" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[4].marciano" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[4].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[4].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[4].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[5].nada" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[5].marciano" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[5].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[5].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[5].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[6].nada" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[6].marciano" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[6].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[6].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[6].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[7].nada" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[7].marciano" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[7].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[7].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[7].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[8].nada" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[8].marciano" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[8].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[8].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[8].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[9].nada" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[9].marciano" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[9].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[9].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[9].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[10].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[10].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[10].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[10].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[10].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[11].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[11].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[11].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[11].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[11].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[13].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[13].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[13].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[13].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[13].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[14].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[14].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[14].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[14].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[14].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[15].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[15].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[15].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[15].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[15].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[16].nada" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[16].marciano" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[16].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[16].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[16].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[17].nada" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[17].marciano" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[17].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[17].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[17].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[18].nada" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[18].marciano" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[18].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[18].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[18].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[19].nada" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[19].marciano" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[19].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[19].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[19].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[20].nada" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[20].marciano" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[20].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[20].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[20].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[21].nada" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[21].marciano" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[21].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[21].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[21].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[22].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[22].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[22].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[22].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[22].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[23].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[23].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[23].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[23].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[23].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[24].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[24].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[24].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[24].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[24].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[25].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[25].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[25].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[25].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[25].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[26].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[26].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[26].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[26].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[26].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[27].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[27].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[27].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[27].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[27].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[28].nada" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[28].marciano" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[28].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[28].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[28].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[29].nada" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[29].marciano" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[29].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[29].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[29].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[30].nada" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[30].marciano" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[30].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[30].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[30].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[31].nada" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[31].marciano" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[31].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[31].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[31].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[32].nada" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[32].marciano" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[32].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[32].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[32].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[33].nada" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[33].marciano" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[33].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[33].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[33].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[34].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[34].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[34].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[34].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[34].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[35].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[35].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[35].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[35].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[35].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[36].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[36].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[36].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[36].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[36].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[37].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[37].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[37].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[37].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[37].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[38].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[38].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[38].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[38].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[38].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[39].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[39].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[39].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[39].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[39].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[40].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[40].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[40].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[40].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[40].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[41].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[41].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[41].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[41].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[41].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[42].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[42].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[42].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[42].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[42].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[43].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[43].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[43].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[43].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[43].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[44].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[44].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[44].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[44].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[44].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[45].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[45].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[45].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[45].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[45].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[46].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[46].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[46].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[46].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[46].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[47].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[47].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[47].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[47].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[47].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[48].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[48].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[48].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[48].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[48].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[49].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[49].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[49].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[49].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[49].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[50].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[50].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[50].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[50].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[50].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[51].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[51].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[51].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[51].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[51].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[52].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[52].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[52].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[52].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[52].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[53].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[53].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[53].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[53].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[53].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[54].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[54].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[54].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[54].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[54].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[55].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[55].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[55].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[55].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[55].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[56].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[56].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[56].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[56].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[56].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[57].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[57].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[57].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[57].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[57].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[58].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[58].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[58].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[58].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[58].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[59].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[59].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[59].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[59].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[59].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[60].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[60].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[60].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[60].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[60].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[61].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[61].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[61].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[61].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[61].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[62].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[62].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[62].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[62].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[62].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[63].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[63].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[63].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[63].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[63].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[64].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[64].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[64].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[64].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[64].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[65].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[65].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[65].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[65].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[65].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[66].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[66].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[66].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[66].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[66].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[67].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[67].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[67].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[67].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[67].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[68].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[68].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[68].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[68].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[68].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[69].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[69].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[69].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[69].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[69].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[70].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[70].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[70].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[70].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[70].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[71].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[71].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[71].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[71].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[71].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[72].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[72].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[72].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[72].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[72].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[73].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[73].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[73].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[73].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[73].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[74].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[74].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[74].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[74].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[74].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[75].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[75].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[75].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[75].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[75].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[76].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[76].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[76].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[76].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[76].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[77].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[77].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[77].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[77].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[77].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[78].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[78].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[78].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[78].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[78].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[79].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[79].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[79].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[79].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[79].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[80].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[80].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[80].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[80].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[80].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[81].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[81].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[81].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[81].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[81].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[82].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[82].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[82].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[82].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[82].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[83].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[83].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[83].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[83].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[83].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[84].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[84].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[84].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[84].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[84].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[85].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[85].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[85].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[85].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[85].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[86].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[86].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[86].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[86].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[86].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[87].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[87].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[87].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[87].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[87].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[88].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[88].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[88].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[88].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[88].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[89].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[89].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[89].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[89].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[89].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[90].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[90].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[90].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[90].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[90].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[91].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[91].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[91].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[91].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[91].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[92].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[92].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[92].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[92].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[92].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[93].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[93].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[93].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[93].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[93].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[94].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[94].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[94].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[94].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[94].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[95].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[95].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[95].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[95].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[95].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[96].nada" at Space_Invaders_Ultimate.vhd(50) to 1
+Warning (10030): Tied undriven net "memoria_video[96].marciano" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[96].muerto" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[96].disparo" at Space_Invaders_Ultimate.vhd(50) to 0
+Warning (10030): Tied undriven net "memoria_video[96].nave" at Space_Invaders_Ultimate.vhd(50) to 0
+Info: Inferred 2 megafunctions from design logic
+    Info: Inferred lpm_counter megafunction (LPM_WIDTH=22) from the following logic: "contador_botones[0]~22"
+    Info: Inferred lpm_counter megafunction (LPM_WIDTH=10) from the following logic: "v_cnt[0]~20"
+Info: Found 1 design units, including 1 entities, in source file ../../../../dcse/altera/quartus60/libraries/megafunctions/lpm_counter.tdf
+    Info: Found entity 1: lpm_counter
+Info: Elaborated megafunction instantiation "lpm_counter:contador_botones_rtl_0"
+Info: Found 1 design units, including 1 entities, in source file ../../../../dcse/altera/quartus60/libraries/megafunctions/alt_counter_f10ke.tdf
+    Info: Found entity 1: alt_counter_f10ke
+Info: Elaborated megafunction instantiation "lpm_counter:contador_botones_rtl_0|alt_counter_f10ke:wysi_counter", which is child of megafunction instantiation "lpm_counter:contador_botones_rtl_0"
+Info: Instantiated megafunction "lpm_counter:contador_botones_rtl_0" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "22"
+    Info: Parameter "LPM_DIRECTION" = "UP"
+    Info: Parameter "LPM_TYPE" = "LPM_COUNTER"
+Info: Elaborated megafunction instantiation "lpm_counter:v_cnt_rtl_1"
+Info: Elaborated megafunction instantiation "lpm_counter:v_cnt_rtl_1|alt_counter_f10ke:wysi_counter", which is child of megafunction instantiation "lpm_counter:v_cnt_rtl_1"
+Info: Instantiated megafunction "lpm_counter:v_cnt_rtl_1" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "10"
+    Info: Parameter "LPM_DIRECTION" = "UP"
+    Info: Parameter "LPM_TYPE" = "LPM_COUNTER"
+Info: Found 1 design units, including 1 entities, in source file ../../../../dcse/altera/quartus60/libraries/megafunctions/lpm_add_sub.tdf
+    Info: Found entity 1: lpm_add_sub
+Info: Elaborated megafunction instantiation "lpm_add_sub:Add2"
+Info: Found 1 design units, including 1 entities, in source file ../../../../dcse/altera/quartus60/libraries/megafunctions/addcore.tdf
+    Info: Found entity 1: addcore
+Info: Elaborated megafunction instantiation "lpm_add_sub:Add2|addcore:adder", which is child of megafunction instantiation "lpm_add_sub:Add2"
+Info: Instantiated megafunction "lpm_add_sub:Add2" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "4"
+    Info: Parameter "LPM_DIRECTION" = "ADD"
+    Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info: Parameter "ONE_INPUT_IS_CONSTANT" = "NO"
+Info: Found 1 design units, including 1 entities, in source file ../../../../dcse/altera/quartus60/libraries/megafunctions/a_csnbuffer.tdf
+    Info: Found entity 1: a_csnbuffer
+Info: Elaborated megafunction instantiation "lpm_add_sub:Add2|addcore:adder|a_csnbuffer:oflow_node", which is child of megafunction instantiation "lpm_add_sub:Add2"
+Info: Instantiated megafunction "lpm_add_sub:Add2" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "4"
+    Info: Parameter "LPM_DIRECTION" = "ADD"
+    Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info: Parameter "ONE_INPUT_IS_CONSTANT" = "NO"
+Info: Elaborated megafunction instantiation "lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node", which is child of megafunction instantiation "lpm_add_sub:Add2"
+Info: Instantiated megafunction "lpm_add_sub:Add2" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "4"
+    Info: Parameter "LPM_DIRECTION" = "ADD"
+    Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info: Parameter "ONE_INPUT_IS_CONSTANT" = "NO"
+Info: Found 1 design units, including 1 entities, in source file ../../../../dcse/altera/quartus60/libraries/megafunctions/altshift.tdf
+    Info: Found entity 1: altshift
+Info: Elaborated megafunction instantiation "lpm_add_sub:Add2|altshift:result_ext_latency_ffs", which is child of megafunction instantiation "lpm_add_sub:Add2"
+Info: Instantiated megafunction "lpm_add_sub:Add2" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "4"
+    Info: Parameter "LPM_DIRECTION" = "ADD"
+    Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info: Parameter "ONE_INPUT_IS_CONSTANT" = "NO"
+Info: Elaborated megafunction instantiation "lpm_add_sub:Add2|altshift:carry_ext_latency_ffs", which is child of megafunction instantiation "lpm_add_sub:Add2"
+Info: Instantiated megafunction "lpm_add_sub:Add2" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "4"
+    Info: Parameter "LPM_DIRECTION" = "ADD"
+    Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info: Parameter "ONE_INPUT_IS_CONSTANT" = "NO"
+Info: Elaborated megafunction instantiation "lpm_add_sub:Add3"
+Info: Elaborated megafunction instantiation "lpm_add_sub:Add3|addcore:adder", which is child of megafunction instantiation "lpm_add_sub:Add3"
+Info: Instantiated megafunction "lpm_add_sub:Add3" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "10"
+    Info: Parameter "LPM_DIRECTION" = "ADD"
+    Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info: Parameter "ONE_INPUT_IS_CONSTANT" = "YES"
+Info: Elaborated megafunction instantiation "lpm_add_sub:Add3|addcore:adder|a_csnbuffer:oflow_node", which is child of megafunction instantiation "lpm_add_sub:Add3"
+Info: Instantiated megafunction "lpm_add_sub:Add3" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "10"
+    Info: Parameter "LPM_DIRECTION" = "ADD"
+    Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info: Parameter "ONE_INPUT_IS_CONSTANT" = "YES"
+Info: Elaborated megafunction instantiation "lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node", which is child of megafunction instantiation "lpm_add_sub:Add3"
+Info: Instantiated megafunction "lpm_add_sub:Add3" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "10"
+    Info: Parameter "LPM_DIRECTION" = "ADD"
+    Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info: Parameter "ONE_INPUT_IS_CONSTANT" = "YES"
+Info: Elaborated megafunction instantiation "lpm_add_sub:Add3|altshift:result_ext_latency_ffs", which is child of megafunction instantiation "lpm_add_sub:Add3"
+Info: Instantiated megafunction "lpm_add_sub:Add3" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "10"
+    Info: Parameter "LPM_DIRECTION" = "ADD"
+    Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info: Parameter "ONE_INPUT_IS_CONSTANT" = "YES"
+Info: Found 1 design units, including 1 entities, in source file ../../../../dcse/altera/quartus60/libraries/megafunctions/lpm_divide.tdf
+    Info: Found entity 1: lpm_divide
+Info: Elaborated megafunction instantiation "lpm_divide:Mod0"
+Info: Found 1 design units, including 1 entities, in source file db/lpm_divide_npl.tdf
+    Info: Found entity 1: lpm_divide_npl
+Info: Found 1 design units, including 1 entities, in source file db/sign_div_unsign_9kh.tdf
+    Info: Found entity 1: sign_div_unsign_9kh
+Info: Found 1 design units, including 1 entities, in source file db/alt_u_div_kke.tdf
+    Info: Found entity 1: alt_u_div_kke
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_a9c.tdf
+    Info: Found entity 1: add_sub_a9c
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_b9c.tdf
+    Info: Found entity 1: add_sub_b9c
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_c9c.tdf
+    Info: Found entity 1: add_sub_c9c
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_d9c.tdf
+    Info: Found entity 1: add_sub_d9c
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_e9c.tdf
+    Info: Found entity 1: add_sub_e9c
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_f9c.tdf
+    Info: Found entity 1: add_sub_f9c
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_g9c.tdf
+    Info: Found entity 1: add_sub_g9c
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_f5c.tdf
+    Info: Found entity 1: add_sub_f5c
+Info: Elaborated megafunction instantiation "lpm_add_sub:Add7"
+Info: Elaborated megafunction instantiation "lpm_add_sub:Add7|addcore:adder", which is child of megafunction instantiation "lpm_add_sub:Add7"
+Info: Instantiated megafunction "lpm_add_sub:Add7" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "7"
+    Info: Parameter "LPM_DIRECTION" = "ADD"
+    Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info: Parameter "ONE_INPUT_IS_CONSTANT" = "YES"
+Info: Elaborated megafunction instantiation "lpm_add_sub:Add7|addcore:adder|a_csnbuffer:oflow_node", which is child of megafunction instantiation "lpm_add_sub:Add7"
+Info: Instantiated megafunction "lpm_add_sub:Add7" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "7"
+    Info: Parameter "LPM_DIRECTION" = "ADD"
+    Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info: Parameter "ONE_INPUT_IS_CONSTANT" = "YES"
+Info: Elaborated megafunction instantiation "lpm_add_sub:Add7|addcore:adder|a_csnbuffer:result_node", which is child of megafunction instantiation "lpm_add_sub:Add7"
+Info: Instantiated megafunction "lpm_add_sub:Add7" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "7"
+    Info: Parameter "LPM_DIRECTION" = "ADD"
+    Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info: Parameter "ONE_INPUT_IS_CONSTANT" = "YES"
+Info: Elaborated megafunction instantiation "lpm_add_sub:Add7|altshift:result_ext_latency_ffs", which is child of megafunction instantiation "lpm_add_sub:Add7"
+Info: Instantiated megafunction "lpm_add_sub:Add7" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "7"
+    Info: Parameter "LPM_DIRECTION" = "ADD"
+    Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info: Parameter "ONE_INPUT_IS_CONSTANT" = "YES"
+Info: Elaborated megafunction instantiation "lpm_add_sub:Add6"
+Info: Elaborated megafunction instantiation "lpm_add_sub:Add6|addcore:adder", which is child of megafunction instantiation "lpm_add_sub:Add6"
+Info: Instantiated megafunction "lpm_add_sub:Add6" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "7"
+    Info: Parameter "LPM_DIRECTION" = "ADD"
+    Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info: Parameter "ONE_INPUT_IS_CONSTANT" = "YES"
+Info: State machine "|space_invaders_ultimate|memoria_video[108]" contains 5 states
+Info: State machine "|space_invaders_ultimate|memoria_video[107]" contains 5 states
+Info: State machine "|space_invaders_ultimate|memoria_video[106]" contains 5 states
+Info: State machine "|space_invaders_ultimate|memoria_video[105]" contains 5 states
+Info: State machine "|space_invaders_ultimate|memoria_video[104]" contains 5 states
+Info: State machine "|space_invaders_ultimate|memoria_video[103]" contains 5 states
+Info: State machine "|space_invaders_ultimate|memoria_video[102]" contains 5 states
+Info: State machine "|space_invaders_ultimate|memoria_video[101]" contains 5 states
+Info: State machine "|space_invaders_ultimate|memoria_video[100]" contains 5 states
+Info: State machine "|space_invaders_ultimate|memoria_video[99]" contains 5 states
+Info: State machine "|space_invaders_ultimate|memoria_video[98]" contains 5 states
+Info: State machine "|space_invaders_ultimate|memoria_video[97]" contains 5 states
+Info: State machine "|space_invaders_ultimate|memoria_video[1]" contains 5 states
+Info: Selected Auto state machine encoding method for state machine "|space_invaders_ultimate|memoria_video[108]"
+Info: Encoding result for state machine "|space_invaders_ultimate|memoria_video[108]"
+    Info: Completed encoding using 5 state bits
+        Info: Encoded state bit "memoria_video[108].nave"
+        Info: Encoded state bit "memoria_video[108].disparo"
+        Info: Encoded state bit "memoria_video[108].muerto"
+        Info: Encoded state bit "memoria_video[108].marciano"
+        Info: Encoded state bit "memoria_video[108].nada"
+    Info: State "|space_invaders_ultimate|memoria_video[108].nada" uses code string "00000"
+    Info: State "|space_invaders_ultimate|memoria_video[108].marciano" uses code string "00011"
+    Info: State "|space_invaders_ultimate|memoria_video[108].muerto" uses code string "00101"
+    Info: State "|space_invaders_ultimate|memoria_video[108].disparo" uses code string "01001"
+    Info: State "|space_invaders_ultimate|memoria_video[108].nave" uses code string "10001"
+Info: Selected Auto state machine encoding method for state machine "|space_invaders_ultimate|memoria_video[107]"
+Info: Encoding result for state machine "|space_invaders_ultimate|memoria_video[107]"
+    Info: Completed encoding using 5 state bits
+        Info: Encoded state bit "memoria_video[107].nave"
+        Info: Encoded state bit "memoria_video[107].disparo"
+        Info: Encoded state bit "memoria_video[107].muerto"
+        Info: Encoded state bit "memoria_video[107].marciano"
+        Info: Encoded state bit "memoria_video[107].nada"
+    Info: State "|space_invaders_ultimate|memoria_video[107].nada" uses code string "00000"
+    Info: State "|space_invaders_ultimate|memoria_video[107].marciano" uses code string "00011"
+    Info: State "|space_invaders_ultimate|memoria_video[107].muerto" uses code string "00101"
+    Info: State "|space_invaders_ultimate|memoria_video[107].disparo" uses code string "01001"
+    Info: State "|space_invaders_ultimate|memoria_video[107].nave" uses code string "10001"
+Info: Selected Auto state machine encoding method for state machine "|space_invaders_ultimate|memoria_video[106]"
+Info: Encoding result for state machine "|space_invaders_ultimate|memoria_video[106]"
+    Info: Completed encoding using 5 state bits
+        Info: Encoded state bit "memoria_video[106].nave"
+        Info: Encoded state bit "memoria_video[106].disparo"
+        Info: Encoded state bit "memoria_video[106].muerto"
+        Info: Encoded state bit "memoria_video[106].marciano"
+        Info: Encoded state bit "memoria_video[106].nada"
+    Info: State "|space_invaders_ultimate|memoria_video[106].nada" uses code string "00000"
+    Info: State "|space_invaders_ultimate|memoria_video[106].marciano" uses code string "00011"
+    Info: State "|space_invaders_ultimate|memoria_video[106].muerto" uses code string "00101"
+    Info: State "|space_invaders_ultimate|memoria_video[106].disparo" uses code string "01001"
+    Info: State "|space_invaders_ultimate|memoria_video[106].nave" uses code string "10001"
+Info: Selected Auto state machine encoding method for state machine "|space_invaders_ultimate|memoria_video[105]"
+Info: Encoding result for state machine "|space_invaders_ultimate|memoria_video[105]"
+    Info: Completed encoding using 5 state bits
+        Info: Encoded state bit "memoria_video[105].nave"
+        Info: Encoded state bit "memoria_video[105].disparo"
+        Info: Encoded state bit "memoria_video[105].muerto"
+        Info: Encoded state bit "memoria_video[105].marciano"
+        Info: Encoded state bit "memoria_video[105].nada"
+    Info: State "|space_invaders_ultimate|memoria_video[105].nada" uses code string "00000"
+    Info: State "|space_invaders_ultimate|memoria_video[105].marciano" uses code string "00011"
+    Info: State "|space_invaders_ultimate|memoria_video[105].muerto" uses code string "00101"
+    Info: State "|space_invaders_ultimate|memoria_video[105].disparo" uses code string "01001"
+    Info: State "|space_invaders_ultimate|memoria_video[105].nave" uses code string "10001"
+Info: Selected Auto state machine encoding method for state machine "|space_invaders_ultimate|memoria_video[104]"
+Info: Encoding result for state machine "|space_invaders_ultimate|memoria_video[104]"
+    Info: Completed encoding using 5 state bits
+        Info: Encoded state bit "memoria_video[104].nave"
+        Info: Encoded state bit "memoria_video[104].disparo"
+        Info: Encoded state bit "memoria_video[104].muerto"
+        Info: Encoded state bit "memoria_video[104].marciano"
+        Info: Encoded state bit "memoria_video[104].nada"
+    Info: State "|space_invaders_ultimate|memoria_video[104].nada" uses code string "00000"
+    Info: State "|space_invaders_ultimate|memoria_video[104].marciano" uses code string "00011"
+    Info: State "|space_invaders_ultimate|memoria_video[104].muerto" uses code string "00101"
+    Info: State "|space_invaders_ultimate|memoria_video[104].disparo" uses code string "01001"
+    Info: State "|space_invaders_ultimate|memoria_video[104].nave" uses code string "10001"
+Info: Selected Auto state machine encoding method for state machine "|space_invaders_ultimate|memoria_video[103]"
+Info: Encoding result for state machine "|space_invaders_ultimate|memoria_video[103]"
+    Info: Completed encoding using 5 state bits
+        Info: Encoded state bit "memoria_video[103].nave"
+        Info: Encoded state bit "memoria_video[103].disparo"
+        Info: Encoded state bit "memoria_video[103].muerto"
+        Info: Encoded state bit "memoria_video[103].marciano"
+        Info: Encoded state bit "memoria_video[103].nada"
+    Info: State "|space_invaders_ultimate|memoria_video[103].nada" uses code string "00000"
+    Info: State "|space_invaders_ultimate|memoria_video[103].marciano" uses code string "00011"
+    Info: State "|space_invaders_ultimate|memoria_video[103].muerto" uses code string "00101"
+    Info: State "|space_invaders_ultimate|memoria_video[103].disparo" uses code string "01001"
+    Info: State "|space_invaders_ultimate|memoria_video[103].nave" uses code string "10001"
+Info: Selected Auto state machine encoding method for state machine "|space_invaders_ultimate|memoria_video[102]"
+Info: Encoding result for state machine "|space_invaders_ultimate|memoria_video[102]"
+    Info: Completed encoding using 5 state bits
+        Info: Encoded state bit "memoria_video[102].nave"
+        Info: Encoded state bit "memoria_video[102].disparo"
+        Info: Encoded state bit "memoria_video[102].muerto"
+        Info: Encoded state bit "memoria_video[102].marciano"
+        Info: Encoded state bit "memoria_video[102].nada"
+    Info: State "|space_invaders_ultimate|memoria_video[102].nada" uses code string "00000"
+    Info: State "|space_invaders_ultimate|memoria_video[102].marciano" uses code string "00011"
+    Info: State "|space_invaders_ultimate|memoria_video[102].muerto" uses code string "00101"
+    Info: State "|space_invaders_ultimate|memoria_video[102].disparo" uses code string "01001"
+    Info: State "|space_invaders_ultimate|memoria_video[102].nave" uses code string "10001"
+Info: Selected Auto state machine encoding method for state machine "|space_invaders_ultimate|memoria_video[101]"
+Info: Encoding result for state machine "|space_invaders_ultimate|memoria_video[101]"
+    Info: Completed encoding using 5 state bits
+        Info: Encoded state bit "memoria_video[101].nave"
+        Info: Encoded state bit "memoria_video[101].disparo"
+        Info: Encoded state bit "memoria_video[101].muerto"
+        Info: Encoded state bit "memoria_video[101].marciano"
+        Info: Encoded state bit "memoria_video[101].nada"
+    Info: State "|space_invaders_ultimate|memoria_video[101].nada" uses code string "00000"
+    Info: State "|space_invaders_ultimate|memoria_video[101].marciano" uses code string "00011"
+    Info: State "|space_invaders_ultimate|memoria_video[101].muerto" uses code string "00101"
+    Info: State "|space_invaders_ultimate|memoria_video[101].disparo" uses code string "01001"
+    Info: State "|space_invaders_ultimate|memoria_video[101].nave" uses code string "10001"
+Info: Selected Auto state machine encoding method for state machine "|space_invaders_ultimate|memoria_video[100]"
+Info: Encoding result for state machine "|space_invaders_ultimate|memoria_video[100]"
+    Info: Completed encoding using 5 state bits
+        Info: Encoded state bit "memoria_video[100].nave"
+        Info: Encoded state bit "memoria_video[100].disparo"
+        Info: Encoded state bit "memoria_video[100].muerto"
+        Info: Encoded state bit "memoria_video[100].marciano"
+        Info: Encoded state bit "memoria_video[100].nada"
+    Info: State "|space_invaders_ultimate|memoria_video[100].nada" uses code string "00000"
+    Info: State "|space_invaders_ultimate|memoria_video[100].marciano" uses code string "00011"
+    Info: State "|space_invaders_ultimate|memoria_video[100].muerto" uses code string "00101"
+    Info: State "|space_invaders_ultimate|memoria_video[100].disparo" uses code string "01001"
+    Info: State "|space_invaders_ultimate|memoria_video[100].nave" uses code string "10001"
+Info: Selected Auto state machine encoding method for state machine "|space_invaders_ultimate|memoria_video[99]"
+Info: Encoding result for state machine "|space_invaders_ultimate|memoria_video[99]"
+    Info: Completed encoding using 5 state bits
+        Info: Encoded state bit "memoria_video[99].nave"
+        Info: Encoded state bit "memoria_video[99].disparo"
+        Info: Encoded state bit "memoria_video[99].muerto"
+        Info: Encoded state bit "memoria_video[99].marciano"
+        Info: Encoded state bit "memoria_video[99].nada"
+    Info: State "|space_invaders_ultimate|memoria_video[99].nada" uses code string "00000"
+    Info: State "|space_invaders_ultimate|memoria_video[99].marciano" uses code string "00011"
+    Info: State "|space_invaders_ultimate|memoria_video[99].muerto" uses code string "00101"
+    Info: State "|space_invaders_ultimate|memoria_video[99].disparo" uses code string "01001"
+    Info: State "|space_invaders_ultimate|memoria_video[99].nave" uses code string "10001"
+Info: Selected Auto state machine encoding method for state machine "|space_invaders_ultimate|memoria_video[98]"
+Info: Encoding result for state machine "|space_invaders_ultimate|memoria_video[98]"
+    Info: Completed encoding using 5 state bits
+        Info: Encoded state bit "memoria_video[98].nave"
+        Info: Encoded state bit "memoria_video[98].disparo"
+        Info: Encoded state bit "memoria_video[98].muerto"
+        Info: Encoded state bit "memoria_video[98].marciano"
+        Info: Encoded state bit "memoria_video[98].nada"
+    Info: State "|space_invaders_ultimate|memoria_video[98].nada" uses code string "00000"
+    Info: State "|space_invaders_ultimate|memoria_video[98].marciano" uses code string "00011"
+    Info: State "|space_invaders_ultimate|memoria_video[98].muerto" uses code string "00101"
+    Info: State "|space_invaders_ultimate|memoria_video[98].disparo" uses code string "01001"
+    Info: State "|space_invaders_ultimate|memoria_video[98].nave" uses code string "10001"
+Info: Selected Auto state machine encoding method for state machine "|space_invaders_ultimate|memoria_video[97]"
+Info: Encoding result for state machine "|space_invaders_ultimate|memoria_video[97]"
+    Info: Completed encoding using 5 state bits
+        Info: Encoded state bit "memoria_video[97].nave"
+        Info: Encoded state bit "memoria_video[97].disparo"
+        Info: Encoded state bit "memoria_video[97].muerto"
+        Info: Encoded state bit "memoria_video[97].marciano"
+        Info: Encoded state bit "memoria_video[97].nada"
+    Info: State "|space_invaders_ultimate|memoria_video[97].nada" uses code string "00000"
+    Info: State "|space_invaders_ultimate|memoria_video[97].marciano" uses code string "00011"
+    Info: State "|space_invaders_ultimate|memoria_video[97].muerto" uses code string "00101"
+    Info: State "|space_invaders_ultimate|memoria_video[97].disparo" uses code string "01001"
+    Info: State "|space_invaders_ultimate|memoria_video[97].nave" uses code string "10001"
+Info: Selected Auto state machine encoding method for state machine "|space_invaders_ultimate|memoria_video[1]"
+Info: Encoding result for state machine "|space_invaders_ultimate|memoria_video[1]"
+    Info: Completed encoding using 5 state bits
+        Info: Encoded state bit "memoria_video[1].nave"
+        Info: Encoded state bit "memoria_video[1].disparo"
+        Info: Encoded state bit "memoria_video[1].muerto"
+        Info: Encoded state bit "memoria_video[1].marciano"
+        Info: Encoded state bit "memoria_video[1].nada"
+    Info: State "|space_invaders_ultimate|memoria_video[1].nada" uses code string "00000"
+    Info: State "|space_invaders_ultimate|memoria_video[1].marciano" uses code string "00011"
+    Info: State "|space_invaders_ultimate|memoria_video[1].muerto" uses code string "00101"
+    Info: State "|space_invaders_ultimate|memoria_video[1].disparo" uses code string "01001"
+    Info: State "|space_invaders_ultimate|memoria_video[1].nave" uses code string "10001"
+Warning: Reduced register "memoria_video[105].marciano" with stuck data_in port to stuck value GND
+Warning: Reduced register "memoria_video[106].marciano" with stuck data_in port to stuck value GND
+Warning: Reduced register "memoria_video[104].marciano" with stuck data_in port to stuck value GND
+Warning: Reduced register "memoria_video[107].marciano" with stuck data_in port to stuck value GND
+Warning: Reduced register "memoria_video[102].marciano" with stuck data_in port to stuck value GND
+Warning: Reduced register "memoria_video[101].marciano" with stuck data_in port to stuck value GND
+Warning: Reduced register "memoria_video[100].marciano" with stuck data_in port to stuck value GND
+Warning: Reduced register "memoria_video[103].marciano" with stuck data_in port to stuck value GND
+Warning: Reduced register "memoria_video[97].marciano" with stuck data_in port to stuck value GND
+Warning: Reduced register "memoria_video[98].marciano" with stuck data_in port to stuck value GND
+Warning: Reduced register "memoria_video[99].marciano" with stuck data_in port to stuck value GND
+Warning: Reduced register "memoria_video[108].marciano" with stuck data_in port to stuck value GND
+Warning: Reduced register "memoria_video[105].muerto" with stuck data_in port to stuck value GND
+Warning: Reduced register "memoria_video[106].muerto" with stuck data_in port to stuck value GND
+Warning: Reduced register "memoria_video[104].muerto" with stuck data_in port to stuck value GND
+Warning: Reduced register "memoria_video[107].muerto" with stuck data_in port to stuck value GND
+Warning: Reduced register "memoria_video[102].muerto" with stuck data_in port to stuck value GND
+Warning: Reduced register "memoria_video[101].muerto" with stuck data_in port to stuck value GND
+Warning: Reduced register "memoria_video[100].muerto" with stuck data_in port to stuck value GND
+Warning: Reduced register "memoria_video[103].muerto" with stuck data_in port to stuck value GND
+Warning: Reduced register "memoria_video[97].muerto" with stuck data_in port to stuck value GND
+Warning: Reduced register "memoria_video[98].muerto" with stuck data_in port to stuck value GND
+Warning: Reduced register "memoria_video[99].muerto" with stuck data_in port to stuck value GND
+Warning: Reduced register "memoria_video[108].muerto" with stuck data_in port to stuck value GND
+Warning: Reduced register "memoria_video[105].disparo" with stuck data_in port to stuck value GND
+Warning: Reduced register "memoria_video[106].disparo" with stuck data_in port to stuck value GND
+Warning: Reduced register "memoria_video[104].disparo" with stuck data_in port to stuck value GND
+Warning: Reduced register "memoria_video[107].disparo" with stuck data_in port to stuck value GND
+Warning: Reduced register "memoria_video[101].disparo" with stuck data_in port to stuck value GND
+Warning: Reduced register "memoria_video[102].disparo" with stuck data_in port to stuck value GND
+Warning: Reduced register "memoria_video[100].disparo" with stuck data_in port to stuck value GND
+Warning: Reduced register "memoria_video[103].disparo" with stuck data_in port to stuck value GND
+Warning: Reduced register "memoria_video[97].disparo" with stuck data_in port to stuck value GND
+Warning: Reduced register "memoria_video[98].disparo" with stuck data_in port to stuck value GND
+Warning: Reduced register "memoria_video[99].disparo" with stuck data_in port to stuck value GND
+Warning: Reduced register "memoria_video[108].disparo" with stuck data_in port to stuck value GND
+Info: Duplicate registers merged to single register
+    Info: Duplicate register "memoria_video[1].disparo" merged to single register "memoria_video[1].nada"
+Warning: Output pins are stuck at VCC or GND
+    Warning: Pin "display_unidades[0]" stuck at GND
+    Warning: Pin "display_unidades[1]" stuck at GND
+    Warning: Pin "display_unidades[2]" stuck at GND
+    Warning: Pin "display_unidades[3]" stuck at GND
+    Warning: Pin "display_unidades[4]" stuck at GND
+    Warning: Pin "display_unidades[5]" stuck at GND
+    Warning: Pin "display_unidades[6]" stuck at GND
+    Warning: Pin "display_decenas[0]" stuck at GND
+    Warning: Pin "display_decenas[1]" stuck at GND
+    Warning: Pin "display_decenas[2]" stuck at GND
+    Warning: Pin "display_decenas[3]" stuck at GND
+    Warning: Pin "display_decenas[4]" stuck at GND
+    Warning: Pin "display_decenas[5]" stuck at GND
+    Warning: Pin "display_decenas[6]" stuck at GND
+Warning: Ignored 5 CARRY_SUM primitives
+    Warning: Ignored 1 CARRY_SUM primitives -- cannot place fan-in logic in single logic cell
+        Warning: Can't place logic feeding CARRY_SUM primitive "lpm_divide:Mod0|lpm_divide_npl:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kke:divider|add_sub_e9c:add_sub_4|add_sub_cella[3]" in single logic cell
+            Warning: Node "lpm_divide:Mod0|lpm_divide_npl:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kke:divider|add_sub_d9c:add_sub_3|add_sub_cella[3]~32" of type CARRY_SUM
+            Warning: Node "lpm_divide:Mod0|lpm_divide_npl:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kke:divider|add_sub_e9c:add_sub_4|add_sub_cella[2]" of type CARRY_SUM
+    Warning: Ignored 4 CARRY_SUM primitive(s) -- cannot place fan-out logic in single logic cell
+        Warning: Can't place logic fed by CARRY_SUM primitive "lpm_divide:Mod0|lpm_divide_npl:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kke:divider|add_sub_e9c:add_sub_4|add_sub_cella[2]" into a single logic cell
+            Warning: Node "lpm_divide:Mod0|lpm_divide_npl:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kke:divider|add_sub_e9c:add_sub_4|add_sub_cella[3]~62" of type LUT
+            Warning: Node "lpm_divide:Mod0|lpm_divide_npl:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kke:divider|add_sub_e9c:add_sub_4|add_sub_cella[3]~66" of type LUT
+        Warning: Can't place logic fed by CARRY_SUM primitive "lpm_divide:Mod0|lpm_divide_npl:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kke:divider|add_sub_d9c:add_sub_3|add_sub_cella[3]~32" into a single logic cell
+            Warning: Node "lpm_divide:Mod0|lpm_divide_npl:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kke:divider|add_sub_e9c:add_sub_4|add_sub_cella[3]~66" of type LUT
+            Warning: Node "lpm_divide:Mod0|lpm_divide_npl:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kke:divider|add_sub_e9c:add_sub_4|add_sub_cella[3]~62" of type LUT
+        Warning: Can't place logic fed by CARRY_SUM primitive "lpm_divide:Mod0|lpm_divide_npl:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kke:divider|add_sub_d9c:add_sub_3|add_sub_cella[3]" into a single logic cell
+            Warning: Node "lpm_divide:Mod0|lpm_divide_npl:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kke:divider|add_sub_d9c:add_sub_3|add_sub_cella[3]~33" of type LUT
+            Warning: Node "lpm_divide:Mod0|lpm_divide_npl:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kke:divider|add_sub_d9c:add_sub_3|add_sub_cella[3]~34" of type LUT
+        Warning: Can't place logic fed by CARRY_SUM primitive "lpm_divide:Mod0|lpm_divide_npl:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kke:divider|add_sub_d9c:add_sub_3|add_sub_cella[2]" into a single logic cell
+            Warning: Node "lpm_divide:Mod0|lpm_divide_npl:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kke:divider|add_sub_d9c:add_sub_3|add_sub_cella[3]~24" of type LUT
+            Warning: Node "lpm_divide:Mod0|lpm_divide_npl:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kke:divider|add_sub_d9c:add_sub_3|add_sub_cella[3]~27" of type LUT
+Info: Found the following redundant logic cells in design
+    Info: Node "lpm_divide:Mod0|lpm_divide_npl:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kke:divider|add_sub_e9c:add_sub_4|add_sub_cella[2]~70"
+    Info: Node "lpm_divide:Mod0|lpm_divide_npl:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kke:divider|add_sub_e9c:add_sub_4|add_sub_cella[2]~68"
+Info: Found the following redundant logic cells in design
+    Info: Logic cell "lpm_divide:Mod0|lpm_divide_npl:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kke:divider|add_sub_e9c:add_sub_4|add_sub_cella[2]~68"
+    Info: Logic cell "lpm_divide:Mod0|lpm_divide_npl:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kke:divider|add_sub_e9c:add_sub_4|add_sub_cella[2]~70"
+Info: Implemented 307 device resources after synthesis - the final resource count might be different
+    Info: Implemented 3 input pins
+    Info: Implemented 19 output pins
+    Info: Implemented 285 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 554 warnings
+    Info: Processing ended: Tue Jan 18 17:57:32 2011
+    Info: Elapsed time: 00:00:07
+
+
